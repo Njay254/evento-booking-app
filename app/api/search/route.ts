@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server'; export async function GET(req:Request){const {searchParams}=new URL(req.url);return NextResponse.json({mode:searchParams.get('mode')||'all',source:'mock',results:{flights:20,buses:15,trains:10,ships:5}})}
